@@ -1,38 +1,107 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 15%;
+  height: 100vh;
+  padding: 0 10px;
+  
+}
+
+.column1 {
+  float: left;
+  width: 85%;
+  height: 100vh;
+  padding: 0 10px;
+  
+}
+
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+
+
+.card1 {
+  margin-top: 50px;
+  margin-left: 30px;
+  width: 82vw;
+  height: 80vh;
+  min-height: 20vh;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding: 16px;
   text-align: center;
+  border-radius: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card_header {
+  background-color: #f87a39;
+  height: 50px;
+  margin: 15px;
+  border-radius: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.all {
+  
+}
+
+
+
+
+.card11 {
+  position: relative;
+  height: 100px;
+  margin: 40px 25px;
+  transition: 0.4s all;
+  width: 90%;
+  height: 200px;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  text-align: center;
+
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .card {
+  width:500px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-device-width: 800px) and (orientation: portrait) {
+  .card {
+    margin: 12px 10px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.numbers{
+  padding-top: 50px;
 }
